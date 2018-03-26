@@ -34,6 +34,7 @@ class Prostokat extends Czworokat {
 }
 
 let prostokat = new Prostokat('fajny', 'Prostokat', 5, 5, 8, 8);
+
 prostokat.podaj_nazwe();
 prostokat.podaj_typ();
 prostokat.podaj_pole();
