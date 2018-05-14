@@ -1,0 +1,23 @@
+<div class="container" layout="row" layout-align="center center">
+
+  <div class="submit-container">
+
+    <p>Add task</p>
+    <input type="text" [(ngModel)]="task" (keyup.enter)="add()">
+    <button (click)="add()">Submit</button>
+
+  </div>
+
+  <div class="tasks-container">
+
+    <ul *ngFor="let task of tasks">
+
+      <input type="checkbox">
+      <li>{{task}}</li>
+      <button (click)="delete(task,tasks.indexOf(task))">X</button>
+
+    </ul>
+
+  </div>
+
+</div>
