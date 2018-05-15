@@ -1,0 +1,17 @@
+<input type="text" placeholder="Add task.." [(ngModel)]="task" (keyup.enter)="add()">
+<button (click)="add()">Submit</button>
+
+<ng-container *ngIf="tasks.length > 0; else noTasks">
+  <ul *ngFor="let task of tasks">
+
+    <input type="checkbox">
+    <li>{{task}}</li>
+    <button (click)="delete(task)">X</button>
+
+  </ul>
+</ng-container>
+
+<ng-template #noTasks>
+  <br>
+  <br> No tasks found
+</ng-template>
